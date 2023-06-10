@@ -46,6 +46,30 @@ export class SignupComponent extends Component {
             this.state.password
         )
 
+        fetch("http://localhost:3500/api/v1/signup",{
+            method : 'POST',
+            crossDomain : true,
+            headers : {
+                'Content-type' : 'application/json',
+                'Access-Control-Allow-Origin' : '*'
+            },
+            body : JSON.stringify({
+                firstName : this.state.firstName,
+                lastName : this.state.lastName,
+                email : this.state.email,
+                password : this.state.password
+            })
+        }
+        )
+        .then((response) =>{
+            response.json()
+        })
+        .then((data)=>{
+            console.log(data)
+        })
+        
+        
+
     }
 
   render() {
