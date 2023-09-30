@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import LoginComponent from './Components/LoginComponent/LoginComponent';
 import SignupComponent from './Components/SignupComponent/SignupComponent';
+import UserDataComponent from './Components/UserDataComponent/UserDataComponent';
 
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
                             <Routes>
                                 <Route exact path='/' element={<LoginComponent/>}/>
                                 <Route path='/login' element={<LoginComponent/>}/>
-                                <Route exact path='/signup' element={<SignupComponent/>}/>
+                                <Route path='/signup' element={<SignupComponent/>}/>
+                                <Route path='/userdata' element={<UserDataComponent/>}/>
                             </Routes>
                         </div>
                     </div>

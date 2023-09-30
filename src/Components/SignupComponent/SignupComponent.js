@@ -48,10 +48,10 @@ export class SignupComponent extends Component {
 
         fetch("http://localhost:3500/api/v1/signup",{
             method : 'POST',
-            crossDomain : true,
+            crossDomain : true,  //doubt
             headers : {
                 'Content-type' : 'application/json',
-                'Access-Control-Allow-Origin' : '*'
+                'Access-Control-Allow-Origin' : '*'     //doubt
             },
             body : JSON.stringify({
                 firstName : this.state.firstName,
@@ -61,12 +61,8 @@ export class SignupComponent extends Component {
             })
         }
         )
-        .then((response) =>{
-            response.json()
-        })
-        .then((data)=>{
-            console.log(data)
-        })
+        .then((response) => response.json())
+        .then((data)=>console.log(data))
         
         
 
